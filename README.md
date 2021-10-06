@@ -3,6 +3,9 @@
 
 Prieiro desafio da série para a certificação **Back End Development and APIs**, com o objetivo de produzir uma aplicação backend que recebe requisições com parâmetros de datas para serem parseados.[^1].
 
+<br />
+
+[Freecodecamp.org](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 
 
 
@@ -13,7 +16,7 @@ Dependências:
 
 - Express-JS
 - Cors
-
+- Nodemon
 
 
 
