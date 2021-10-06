@@ -30,30 +30,30 @@ Dependências:
 
 <br />
 
-### T         
-![](/public/images/)
+### Timestamp Microservice App rodando na plataforma Replit.com:          
+![Timestamp Microservice App rodando na plataforma Replit.com](/public/images/timestamp-microservice-rodando-no-Replit.png)
 
 
 
 <br />
 
-### F        
-![Fazendo a integração da aplicação com o banco de dados MongoDB](/public/images/)
+### Recebendo parãmetro de data no formato YYYY-MM-DD:          
+![Recebendo parãmetro de data no formato year-month-day](/public/images/parseando-no-formato-YYYY-MM-DD.png)
 
 
 
 
 <br />
 
-### B          
-![](/public/images/)
+### Recebendo parãmetro de data no formato UNIX para data:             
+![Recebendo parãmetro de data no formato UNIX para data](/public/images/parseando-no-formato- UNIX.png)
 
 
 
 <br />
 
-### B            
-![](/public/images/)
+### Resultado final do projeto em Freecodecamp.org:               
+![Resultado final do projeto em Freecodecamp.org](/public/images/timestamp-microservice-freecodecamp.png)
 
 
 
