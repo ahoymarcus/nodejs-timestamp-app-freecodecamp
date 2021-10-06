@@ -24,10 +24,13 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-app.get("/api/current-date", function(req, res) {
-	let newDate = new Date();
+app.get("/api", function(req, res) {
+	let nowDate = new Date();
 	
-	res.json(newDate);
+	res.json({
+		"unix": nowDate.getTime(),
+		"utc": nowDate.toUTCString()
+	});
 });
 
 
@@ -35,7 +38,17 @@ app.get("/api/:date", function(req, res) {
 	const dateString = req.params.date;
 	console.log(dateString);
 	
-	res.json({ "error" : "Invalid Date" });
+	// {"unix": date.getTime(), "utc": date.toUTCString() }
+	// { "unix": 1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT" }
+	
+	let passedInValue = new Date(dateString);
+	
+	if (passedInValue == "Invalid Date") {
+		res.json({ "error" : "Invalid Date" });
+	} else {
+		res.json({ "unix": passedInValue.getTime(), "utc": passedInValue.toUTCString() });
+	}
+	
 });
 
 
