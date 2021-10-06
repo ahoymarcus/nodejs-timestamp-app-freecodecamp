@@ -26,6 +26,7 @@ app.get("/api/hello", function (req, res) {
 
 app.get("/api", function(req, res) {
 	let nowDate = new Date();
+	console.log("Current date: ", nowDate);
 	
 	res.json({
 		"unix": nowDate.getTime(),
@@ -35,13 +36,20 @@ app.get("/api", function(req, res) {
 
 
 app.get("/api/:date", function(req, res) {
-	const dateString = req.params.date;
-	console.log(dateString);
+	const dateParam = req.params.date;
+	console.log(dateParam);
+	
+	let passedInValue;
+	if (parseInt(dateParam) > 10000) {
+		let unixTime = parseInt(dateParam);
+		
+		passedInValue = new Date(unixTime);
+	} else {
+		passedInValue = new Date(dateParam);
+	}
 	
 	// {"unix": date.getTime(), "utc": date.toUTCString() }
 	// { "unix": 1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT" }
-	
-	let passedInValue = new Date(dateString);
 	
 	if (passedInValue == "Invalid Date") {
 		res.json({ "error" : "Invalid Date" });
